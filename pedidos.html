@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafés | Gerenciamento da Cafeteria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="carregarPedidos()">
+
+    <div class="container">
+        <h1>
+            <i class="me-2"><img width="40px" height="40px" src="img/logo.png" alt="coffee-logo"/></i>
+            Gerenciamento da Cafeteria
+        </h1>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-outline-warning"><i class="fas fa-chevron-left me-2"></i>Voltar</a>
+        </div>
+
+        <h3>
+            <i class="me-2"><img width="40px" height="40px" src="img/barista.png" alt="coffee-logo"/></i>
+            Pedidos cadastrados:
+        </h3>
+
+        <table class="table table-success table-striped table-hover mt-4">
+            <thead>
+                <tr>
+                    <td><strong>Cliente</strong></td>
+                    <td><strong>Café</strong></td>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+
+        <div class="box-add big">
+            <h4>Adicionar novo pedido:</h4>
+            <form onsubmit="adicionarPedido(event)" class="form">
+                <input type="text" id="input-nome" placeholder="Nome do Cliente" class="form-control me-2">
+                <select id="input-cafe" class="form-control me-2">
+                    <option value="">Selecione o cafe...</option>
+                </select>
+                <button type="submit" class="btn btn-outline-success">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
